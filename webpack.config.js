@@ -1,15 +1,15 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 module.exports = {
   entry: './src/index.js',
   output: {
+    // eslint-disable-next-line no-undef
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: 'main.js',
   },
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js'],
   },
   module: {
     rules: [
@@ -18,17 +18,15 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-        }
-      }
-    ]
+        },
+      },
+    ],
   },
   plugins: [
-    new HtmlWebpackPlugin([
-      {
-        inject: true,
-        template: './public/index.html',
-        filename: './index.html'
-      }
-    ])
-  ]
-}
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './public/index.html',
+      filename: './index.html',
+    }),
+  ],
+};
