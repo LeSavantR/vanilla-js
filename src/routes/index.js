@@ -11,7 +11,6 @@ const routes = {
   '*': Error404,
   '/contact': 'Contact',
 };
-console.log(routes);
 
 const route = async () => {
   const header = null || document.querySelector('#header');

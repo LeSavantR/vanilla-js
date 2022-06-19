@@ -1,3 +1,8 @@
+# Node Modules
 node_modules/
 
+# Public Assets
 dist/
+
+# VSCode
+.vscode/
